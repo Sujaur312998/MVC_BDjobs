@@ -1,0 +1,54 @@
+﻿@model web_Bdjobs.Models.User
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Birthday)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Birthday)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Discription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Discription)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.cv)
+        </dd>
+    </dl>
+</div>
+<div>
+    <h4 class="text-danger">Upload Your  CV</h4><br />
+    @*<form asp-controller="User" asp-action="" 
+          enctype="multipart/form-data" method="post">
+            <input class="form-control" asp-for="cv" type="file" name="file" /><br /><br />
+            <button class="btn btn-success" type="submit">Submit</button>
+    </form>*@
+</div>
+<br />
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
